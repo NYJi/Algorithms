@@ -1,1 +1,21 @@
+# 📖 큰 수의 법칙(p.92)
 
+## 문제 정의
+
+
+
+'''
+n, m, k = map(int, input().split())
+arr = list(map(int, input().split()))
+arr.sort()
+
+first = arr[len(arr)-1] #가장 큰수
+second = arr[len(arr)-2] # 두번째 큰수
+
+group = [first] * k + [second] #즉 그룹의 길이는 k+1과 같음
+
+# (m // len(group)) 묶음 갯수
+answer = group * (m // len(group)) + group[: m % len(group)]
+print(sum(answer))
+
+'''
